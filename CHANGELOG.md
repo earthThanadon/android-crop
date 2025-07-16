@@ -1,3 +1,6 @@
+## 1.0.5
+* Resolved persistent build failures on JitPack.io caused by redundant and conflicting task dependency configurations. The explicit `dependsOn` for `publishReleasePublicationToMavenLocal` is now correctly positioned to ensure proper build order.
+
 ## 1.0.4
 * Resolved JitPack.io Build Failures: Addressed the "implicit dependency" error by explicitly defining the build order between the AAR bundling and Maven publishing tasks. This ensures the library's .aar file is fully prepared before it's published.
 * Enhanced Maven POM Metadata: Improved the Maven Publication configuration to correctly generate .pom metadata, including all necessary dependencies, ensuring a complete and valid published artifact.

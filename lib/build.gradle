@@ -13,6 +13,12 @@ android {
         testApplicationId 'com.earththanadon.android.crop.test'
         testInstrumentationRunner 'android.test.InstrumentationTestRunner'
     }
+
+    afterEvaluate {
+        tasks.named("publishReleasePublicationToMavenLocal") { publishTask ->
+            publishTask.dependsOn(tasks.named('bundleReleaseAar'))
+        }
+    }
 }
 
 publishing {
@@ -20,7 +26,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.earththanadon'
             artifactId = 'android-crop'
-            version = 'v1.0.4'
+            version = 'v1.0.5'
 
             artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
 
@@ -34,12 +40,6 @@ publishing {
                 }
             }
         }
-    }
-}
-
-tasks.withType(PublishToMavenLocal).all { publishTask ->
-    if (publishTask.name.contains('release')) {
-        publishTask.dependsOn(tasks.named('bundleReleaseAar'))
     }
 }
 
