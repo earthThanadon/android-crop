@@ -1,21 +1,29 @@
 apply plugin: 'com.android.library'
 apply plugin: 'signing'
-//apply from: '../.publishing/sonatype.gradle'
-
-archivesBaseName = 'android-crop'
+apply plugin: 'maven-publish'
 
 android {
+    namespace = "com.earththanadon.android.crop"
     compileSdkVersion 35
 
     defaultConfig {
         minSdkVersion 10
         targetSdkVersion 35
 
-        testApplicationId 'com.soundcloud.android.crop.test'
+        testApplicationId 'com.earththanadon.android.crop.test'
         testInstrumentationRunner 'android.test.InstrumentationTestRunner'
     }
+}
 
-    namespace = "com.soundcloud.android.crop"
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.earththanadon'
+            artifactId = 'android-crop'
+            version = 'v1.0.3'
+            artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
+        }
+    }
 }
 
 dependencies {

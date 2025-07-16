@@ -2,11 +2,6 @@
 
 An Android library project that provides a simple image cropping `Activity`, based on code from AOSP.
 
-**Deprecated!** This project is not maintained. If it doesn't meet your needs as is, consider creating a fork or picking from these [alternatives](https://android-arsenal.com/tag/45).
-
-[![maven central](https://img.shields.io/badge/maven%20central-1.0.1-brightgreen.svg)](http://search.maven.org/#artifactdetails%7Ccom.soundcloud.android%7Candroid-crop%7C1.0.1%7Caar.asc)
-[![changelog](https://img.shields.io/badge/changelog-1.0.1-lightgrey.svg)](CHANGELOG.md)
-
 ## Features
 
 * Gradle build & AAR
@@ -20,7 +15,7 @@ An Android library project that provides a simple image cropping `Activity`, bas
 First, declare `CropImageActivity` in your manifest file:
 
 ```xml
-<activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+<activity android:name="com.earththanadon.android.crop.CropImageActivity" />
 ```
 
 #### Crop
@@ -48,14 +43,6 @@ The library provides a utility method to start an image picker:
 
 ```java
 Crop.pickImage(activity)
-```
-
-#### Dependency
-
-The AAR is published on Maven Central:
-
-```groovy
-compile 'com.soundcloud.android:android-crop:1.0.1@aar'
 ```
 
 ## How does it look?

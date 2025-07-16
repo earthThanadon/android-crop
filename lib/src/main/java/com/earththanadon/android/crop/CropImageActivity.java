@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.soundcloud.android.crop;
+package com.earththanadon.android.crop;
 
 import android.annotation.TargetApi;
 import android.content.Intent;

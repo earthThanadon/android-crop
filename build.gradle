@@ -9,7 +9,7 @@ buildscript {
 }
 
 allprojects {
-    group = 'com.soundcloud.android'
+    group = 'com.earththanadon.android'
     version = project.VERSION
 
     repositories {

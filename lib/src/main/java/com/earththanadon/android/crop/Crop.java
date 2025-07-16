@@ -1,4 +1,4 @@
-package com.soundcloud.android.crop;
+package com.earththanadon.android.crop;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

@@ -1,6 +1,6 @@
-package com.soundcloud.android.crop.example;
+package com.earththanadon.android.crop.example;
 
-import com.soundcloud.android.crop.Crop;
+import com.earththanadon.android.crop.Crop;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.soundcloud.android.crop;
+package com.earththanadon.android.crop;
 
 import android.content.Context;
 import android.graphics.Canvas;

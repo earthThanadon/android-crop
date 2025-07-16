@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.soundcloud.android.crop.example" >
+    package="com.earththanadon.android.crop.example" >
 
     <application
         android:label="@string/app_name"
@@ -8,14 +8,14 @@
         android:allowBackup="true"
         android:theme="@style/CustomTheme">
         <activity
-            android:name="com.soundcloud.android.crop.example.MainActivity"
+            android:name="com.earththanadon.android.crop.example.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity android:name="com.earththanadon.android.crop.CropImageActivity" />
     </application>
     
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

@@ -1,6 +1,13 @@
-## Next
-* Fix max size crash when input cannot be decoded
-* Translations: German, Chinese (simplified & traditional)
+## 1.0.3
+
+* Package Name Refactor: The core package has been refactored from com.soundcloud.android.crop to com.earththanadon.androidcrop to establish clear ownership and prevent conflicts with the original archived library.
+* JitPack.io Compatibility: Implemented necessary maven-publish plugin configurations in build.gradle to ensure successful builds and proper publication via JitPack.io.
+
+## 1.0.2
+
+* Gradle Upgrade: Updated Gradle to version 8.13 for improved build performance and compatibility with the latest Android Studio.
+* Target SDK Update: Increased targetSdkVersion to 35, ensuring compatibility with the latest Android versions and security features.
+* UI/UX Improvements: Implemented minor UI adjustments to better support Edge-to-Edge displays, providing a more immersive user experience.
 
 ## 1.0.1
 

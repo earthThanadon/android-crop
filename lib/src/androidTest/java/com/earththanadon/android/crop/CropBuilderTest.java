@@ -1,4 +1,4 @@
-package com.soundcloud.android.crop;
+package com.earththanadon.android.crop;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
