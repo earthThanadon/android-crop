@@ -2,13 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.soundcloud.android.crop.example.MainActivity">
 
     <ImageView
         android:id="@+id/result_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerInside"
-        android:background="@drawable/texture" />
+        android:background="@drawable/texture"
+        android:scaleType="centerInside" />
 
 </FrameLayout>

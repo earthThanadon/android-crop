@@ -3,17 +3,18 @@ apply plugin: 'com.android.application'
 archivesBaseName = 'android-crop-example'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.1'
+    compileSdkVersion 35
 
     defaultConfig {
         minSdkVersion 10
-        targetSdkVersion 22
+        targetSdkVersion 35
         versionCode Integer.parseInt(project.VERSION_CODE)
         versionName project.VERSION
     }
+
+    namespace = "com.soundcloud.android.crop.example"
 }
 
 dependencies {
-    compile project(':lib')
+    implementation project(':lib')
 }
