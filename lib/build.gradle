@@ -20,9 +20,26 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.earththanadon'
             artifactId = 'android-crop'
-            version = 'v1.0.3'
+            version = 'v1.0.4'
+
             artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
+
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                project.configurations.api.allDependencies.each { dependency ->
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', dependency.group)
+                    dependencyNode.appendNode('artifactId', dependency.name)
+                    dependencyNode.appendNode('version', dependency.version)
+                }
+            }
         }
+    }
+}
+
+tasks.withType(PublishToMavenLocal).all { publishTask ->
+    if (publishTask.name.contains('release')) {
+        publishTask.dependsOn(tasks.named('bundleReleaseAar'))
     }
 }
 

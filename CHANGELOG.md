@@ -1,3 +1,7 @@
+## 1.0.4
+* Resolved JitPack.io Build Failures: Addressed the "implicit dependency" error by explicitly defining the build order between the AAR bundling and Maven publishing tasks. This ensures the library's .aar file is fully prepared before it's published.
+* Enhanced Maven POM Metadata: Improved the Maven Publication configuration to correctly generate .pom metadata, including all necessary dependencies, ensuring a complete and valid published artifact.
+
 ## 1.0.3
 
 * Package Name Refactor: The core package has been refactored from com.soundcloud.android.crop to com.earththanadon.androidcrop to establish clear ownership and prevent conflicts with the original archived library.
